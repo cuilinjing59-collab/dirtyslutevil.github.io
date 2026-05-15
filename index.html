@@ -1,1 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Diary</title>
 
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background: linear-gradient(to bottom,#dff3ff,#f7fbff);
+      font-family:"Microsoft YaHei",sans-serif;
+      color:#3c5f91;
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+
+    /* 背景光晕 */
+
+    .blur{
+      position:fixed;
+      border-radius:50%;
+      background:rgba(255,255,255,0.4);
+      filter:blur(20px);
+      z-index:-1;
+      animation:float 7s ease-in-out infinite;
+    }
+
+    .blur1{
+      width:180px;
+      height:180px;
+      top:8%;
+      left:5%;
+    }
+
+    .blur2{
+      width:240px;
+      height:240px;
+      bottom:10%;
+      right:8%;
+      animation-delay:2s;
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0px);
+      }
+
+      50%{
+        transform:translateY(-20px);
+      }
+    }
+
+    header{
+      text-align:center;
+      padding:70px 20px 40px;
+    }
+
+    .avatar{
+      width:110px;
+      height:110px;
+      border-radius:50%;
+      border:5px solid white;
+      object-fit:cover;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    h1{
+      margin-top:20px;
+      font-size:2.4rem;
+      color:#4772b3;
+    }
+
+    .subtitle{
+      margin-top:12px;
+      color:#6b8ec4;
+      font-size:1rem;
+      line-height:1.8;
+    }
+
+    .container{
+      width:min(820px,92%);
+      margin:auto;
+      padding-bottom:80px;
+    }
+
+    .diary{
+      background:rgba(255,255,255,0.72);
+      backdrop-filter:blur(10px);
+      border-radius:28px;
+      padding:28px;
+      margin-bottom:28px;
+      box-shadow:0 10px 30px rgba(90,140,210,0.12);
+      transition:0.3s;
+    }
+
+    .diary:hover{
+      transform:translateY(-6px);
+    }
+
+    .date{
+      color:#7fa5df;
+      font-size:0.95rem;
+      margin-bottom:14px;
+    }
+
+    .title{
+      font-size:1.3rem;
+      margin-bottom:16px;
+      color:#4168a1;
+      font-weight:bold;
+    }
+
+    .text{
+      color:#5f7ca8;
+      line-height:2;
+      font-size:1rem;
+      white-space:pre-line;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:#86a4d3;
+      font-size:0.9rem;
+    }
+
+    @media(max-width:600px){
+
+      h1{
+        font-size:2rem;
+      }
+
+      .diary{
+        padding:22px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="blur blur1"></div>
+  <div class="blur blur2"></div>
+
+  <header>
+
+    <img
+      class="avatar"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&auto=format&fit=crop"
+    >
+
+    <h1>☁ Blue Diary ☁</h1>
+
+    <div class="subtitle">
+      记录一些温柔的小事 💙<br>
+      日子慢慢过，故事慢慢写。
+    </div>
+
+  </header>
+
+  <div class="container">
+
+    <div class="diary">
+
+      <div class="date">
+        🌙 2026 / 05 / 15
+      </div>
+
+      <div class="title">
+        今天的晚风
+      </div>
+
+      <div class="text">
+今天傍晚出去散步的时候，
+风吹得很舒服。
+
+路边便利店的灯亮起来以后，
+整个街道突然变得很温柔。
+
+我买了一瓶冰可乐，
+坐在长椅上发呆了很久。
+
+原来平静的生活，
+真的会让人慢慢喜欢上这个世界。
+      </div>
+
+    </div>
+
+    <div class="diary">
+
+      <div class="date">
+        ☁ 2026 / 05 / 10
+      </div>
+
+      <div class="title">
+        下雨天
+      </div>
+
+      <div class="text">
+今天下了一整天的雨。
+
+窗户上有很多水雾，
+耳机里循环着很老的歌。
+
+其实我很喜欢这种天气，
+因为整个世界都会安静下来。
+      </div>
+
+    </div>
+
+    <div class="diary">
+
+      <div class="date">
+        💙 2026 / 05 / 03
+      </div>
+
+      <div class="title">
+        写给未来的自己
+      </div>
+
+      <div class="text">
+希望以后回头看的时候，
+会觉得现在努力生活的自己，
+
+有一点点可爱。
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    Made with 💙
+  </footer>
+
+</body>
+</html>
